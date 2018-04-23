@@ -1,0 +1,74 @@
+
+============================================================================================
+At the beginning the process contained many exceptions and errors.
+All of them I managed to overcome, except the last one below:
+============================================================================================
+
+
+
+___________________from spring tool maven clear && build _______________________
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ deloitte ---
+[INFO] Building jar: C:\Users\Vinogura\dropbox2\NEW_john_bryceIN_DropBox studies 01032018\spring studies\JPA\spring workspaces\jpaCouponSys\deloitte\target\deloitte.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.0.1.RELEASE:repackage (default) @ deloitte ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 25.679 s
+[INFO] Finished at: 2018-04-23T15:44:20+03:00
+[INFO] Final Memory: 37M/235M
+[INFO] ------------------------------------------------------------------------
+
+
+__________________from docker terminal_______________________________
+
+$ docker build -f dockerFile -t deloittedocker .
+Sending build context to Docker daemon  32.48MB
+Step 1/5 : FROM openjdk:8-jdk-alpine
+ ---> 224765a6bdbe
+Step 2/5 : VOLUME /tmp
+ ---> Using cache
+ ---> 05b2b0300505
+Step 3/5 : ARG JAR_FILE
+ ---> Using cache
+ ---> f28ffbb96263
+Step 4/5 : ADD ${JAR_FILE} deloitte.jar
+ ---> Using cache
+ ---> 0d43e4d2db6a
+Step 5/5 : ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","
+/deloitte.jar"]
+ ---> Using cache
+ ---> d8f2a911f4e0
+Successfully built d8f2a911f4e0
+
+
+Successfully tagged deloittejar:latest
+SECURITY WARNING: You are building a Docker image from Windows against a non-Win
+dows Docker host. All files and directories added to build context will have '-r
+wxr-xr-x' permissions. It is recommended to double check and reset permissions f
+or sensitive files and directories.
+
+
+_______________________
+$ docker-machine ls
+NAME      ACTIVE   DRIVER       STATE     URL                         SWARM   DO
+CKER        ERRORS
+default   *        virtualbox   Running   tcp://192.168.99.100:2376           v1
+8.04.0-ce
+
+_____________________________________________________
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED
+SIZE
+deloittejar         latest              eda7cfd6cb9b        2 minutes ago
+686MB
+java                8                   d23bdf5b1b1b        15 months ago
+643MB
+
+
+
+_________________________________________________
+$ docker run -p 8080:8080 deloittejar
+Error: Invalid or corrupt jarfile /deloitte.jar
+
+

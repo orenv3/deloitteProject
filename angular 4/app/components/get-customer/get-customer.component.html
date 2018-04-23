@@ -1,0 +1,16 @@
+
+<label for="getCustomer">get Customer</label>
+<input type="number" [(ngModel)]="cust.id">
+<p></p>
+<button (click)="getCustomer()">fetch by id</button>
+<p></p>
+<label for="getCustomer">customer:</label>
+<div>
+  id: {{cust.id}} <br>
+  name: {{cust.name}} <br>
+  address: {{cust.address}} <br>
+  phone: {{cust.phone}} <br>
+</div>
+<p></p>
+<label for="myAlert">my exceptions</label><br>
+<textarea  cols="30" rows="3">{{myAlert}}</textarea>

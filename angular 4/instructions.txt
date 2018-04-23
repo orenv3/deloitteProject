@@ -1,0 +1,8 @@
+
+dist folder: 
+All the files in the dist folder are copied to: deloitte\src\main\resources\static.
+Angular 4 creates those files after the "build" command. Those files are actually, the functionality on the website itself.
+
+app folder:
+The code of angular 4, that cooperates with the REST API.
+

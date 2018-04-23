@@ -1,0 +1,7 @@
+
+link to the website 
+http://localhost:8080/customerWeb/index.html
+
+
+link to swagger-ui
+http://localhost:8080/swagger-ui.html

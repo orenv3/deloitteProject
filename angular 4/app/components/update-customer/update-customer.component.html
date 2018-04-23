@@ -1,0 +1,33 @@
+<p>
+  update-customer
+</p>
+<label for="customerId">update customer</label>
+<input type="number" [(ngModel)]="cust.id"><br>
+<button (click)="getCustomer()">fetch to update</button>
+
+
+<p></p>
+<label for="id">id</label>
+<input type="number" disabled value="{{cust.id}}">
+<p></p>
+
+
+<label for="name">name</label>
+<input type="text" value="{{cust.name}}" [(ngModel)]="cust.name">
+<p></p>
+
+<label for="address">address</label>
+<input type="text" value="{{cust.address}}" [(ngModel)]="cust.address">
+<p></p>
+
+
+<label for="phone">phone</label>
+<input type="number" value="{{cust.phone}}"  [(ngModel)]="cust.phone">
+<br>
+<p></p>
+<button (click)="updateCustomer()">update</button>
+<p></p>
+    <div>
+      <label for="myAlert">my exceptions</label><br>
+      <textarea cols="30" rows="10">{{myAlert}}</textarea>
+    </div>

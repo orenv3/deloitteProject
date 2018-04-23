@@ -1,0 +1,37 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                          https://maven.apache.org/xsd/settings-1.0.0.xsd">
+      <localRepository/>
+      <interactiveMode/>
+      <usePluginRegistry/>
+      <offline/>
+      <pluginGroups/>
+	  
+	  
+	 <server>
+	  <id>docker-hub</id>
+	  <username>orenv3</username>
+	  <password>oren037254216</password>
+	  <configuration>
+	  <email>vinogura.oren@gmail.com</email>
+	  </configuration>
+	  </server>
+	 
+	  
+      <profiles>
+	 <profile>
+    <id>docker</id>
+       <properties>
+           <docker.host>https://192.168.99.100:2376</docker.host>
+           <docker.cert.path>/Users/Vinogura/.docker/machine/machines/default</docker.cert.path>
+       </properties>
+</profile>
+	  </profiles>
+	  
+	  
+	  
+	 <mirrors/>
+      <proxies/>
+	  <activeProfiles/>
+    </settings>

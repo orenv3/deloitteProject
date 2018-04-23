@@ -1,0 +1,22 @@
+<p>
+  create-customer
+</p>
+  <div>
+
+    <label for="name">name</label>
+    <input type="text" [(ngModel)]="cust.name">
+    
+    <p></p>
+    <label for="address">address</label>
+    <input type="text" [(ngModel)]="cust.address">
+    
+    <p></p>
+    <label for="phone">phone</label>
+    <input type="number" [(ngModel)]="cust.phone">
+
+    <p></p>
+    <button (click)="createCustomer()">create</button> 
+  </div>
+  <p></p>
+  <label for="myAlert">my alert</label><br>
+  <textarea cols="30" rows="10">{{myAlert}}</textarea>

@@ -1,0 +1,11 @@
+<p>
+  delete-customer
+</p>
+
+<label for="deleteCustomer">Customer id</label>
+<input type="number" [(ngModel)]="cust.id">
+<br>
+<button (click)="deleteCustomer()">delete</button>
+<p></p>
+<label>my exceptions</label><br>
+<textarea cols="30" rows="3">{{myAlert}}</textarea>
